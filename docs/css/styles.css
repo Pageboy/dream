@@ -1,80 +1,91 @@
-/* This stylesheet is where to add styles for your Shakespeare Play */
-/*We usually add something general for the body*/
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /*your style rules go in here */
+  background-color: bisque;
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-section {
-  border: 0;
+p {
+  margin-top: 1em;
 }
 
-/*Here follows the class names that you will have in your html*/
-/*You may have more if you added styles in InDesign*/
-/*You need to add the style attributes between the curly brackets*/
+header {
+  background-color: #107c28;
+  margin-bottom: 16px;
+  display: block;
+  padding: 3px 0;
+}
 
-/* the following may not be used but it doesn't matter if they are listed here  */
-
-section.cover {
+h1 {
   text-align: center;
-  width: 70%;
-  margin: 20px auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
 }
 
-img.playimage {
-  /* you will need a width attribute in here */
-  max-width: 40%;
-  padding: 20px auto;
+main {
+  /* border: 2px solid red; */
+  width: 80%;
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 900px;
+  background-color: white;
+  /* justify-content: space-between; */
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; /* this is the default */
 }
 
-img.shakespeareimage {
-  /* you will need a width attribute in here */
-  max-width: 40%;
-  padding: 20px auto;
+/* we can use the wildcard / generic selector * to rarget all child elemnts inside the main flex object */
+/* this only works if you apply the same flex basis to those elements */
+
+/* main > * {
+  flex-basis: 250px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 10px;
+} */
+
+/* otherwise we need a seperate rule for figure and info */
+
+.info {
+  flex: 1 0 300px;
 }
 
-/* If you have created any new stlyes in InDesign and used export tags then you need to add them here */
-
-section.dramatis {
-}
-section.play {
-}
-div.sceneImage {
-}
-h1.act {
-}
-p.character {
-}
-p.charactername {
-}
-h1.dramatishead {
-}
-h2.firstscene {
-}
-h2.location {
-}
-p.play_location {
-}
-p.prose {
-}
-h2.scene {
-}
-p.song {
-}
-h2.stagedirection {
-}
-p.verseline {
-}
-span.character_role {
-}
-span.stage_directions_inline {
+figure {
+  /* flex-basis: 200px;
+  flex-grow: 1;
+  flex-shrink: 0; */
+  /*flex is a way give all of this values together - a shortcut */
+  flex: 1 0 200px;
+  margin: 0 0.5em;
 }
 
-span.character_beforespeech {
+img {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* when we view on a mobile phone we want to remove some of the space around the objects to make better use of the smaller screen space */
+
+@media only screen and (max-width: 550px) {
+  main {
+    width: 100%;
+  }
+
+  /* figure {
+    margin: 0 auto;
+  } */
+
+  body {
+    background-color: white;
+  }
 }
