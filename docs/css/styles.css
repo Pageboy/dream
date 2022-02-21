@@ -29,7 +29,7 @@ h1 {
 main {
   /* border: 2px solid red; */
   width: 80%;
-  margin: 0 auto;
+  margin: 0 0;
   padding: 1em;
   max-width: 900px;
   background-color: white;
@@ -67,6 +67,12 @@ figure {
 
 img {
   width: 100%;
+}
+
+.hero {
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 footer {
